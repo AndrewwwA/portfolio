@@ -1,0 +1,55 @@
+#wordsList span {
+  display: block;
+}
+#wordsList {
+  position: relative;
+
+  animation: cycle ease-in 10s infinite;
+}
+#k1 {
+  color: aqua;
+}
+
+#k2 {
+  color: blueviolet;
+}
+#k3 {
+  color: dimgrey;
+}
+#k4 {
+  color: orange;
+}
+#k5 {
+  color: red;
+}
+
+#container {
+  text-align: right;
+  line-height: 60px;
+  height: 60px;
+  text-align: left;
+
+  overflow: hidden;
+}
+
+@keyframes cycle {
+  0% {
+    top: 120px;
+  }
+  20% {
+    top: 60px;
+  }
+  40% {
+    top: 0px;
+  }
+  60% {
+    top: -60px;
+  }
+  80% {
+    top: -120px;
+  }
+
+  100% {
+    top: 120px;
+  }
+}
