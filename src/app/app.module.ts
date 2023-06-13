@@ -7,9 +7,10 @@ import { HeaderComponent } from './comps/header/header.component';
 import { StartboxComponent } from './comps/startbox/startbox.component';
 import { SubheaderComponent } from './comps/subheader/subheader.component';
 import { ProjectheaderComponent } from './comps/projectheader/projectheader.component';
+import { SingleProjectComponent } from './comps/single-project/single-project.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, StartboxComponent, SubheaderComponent, ProjectheaderComponent],
+  declarations: [AppComponent, HeaderComponent, StartboxComponent, SubheaderComponent, ProjectheaderComponent, SingleProjectComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
