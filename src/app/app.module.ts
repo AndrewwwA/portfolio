@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './comps/header/header.component';
 import { StartboxComponent } from './comps/startbox/startbox.component';
@@ -10,8 +11,15 @@ import { ProjectheaderComponent } from './comps/projectheader/projectheader.comp
 import { SingleProjectComponent } from './comps/single-project/single-project.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, StartboxComponent, SubheaderComponent, ProjectheaderComponent, SingleProjectComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    StartboxComponent,
+    SubheaderComponent,
+    ProjectheaderComponent,
+    SingleProjectComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
