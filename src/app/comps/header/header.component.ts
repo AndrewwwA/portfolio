@@ -1,5 +1,5 @@
-import { Component, Directive, HostListener } from '@angular/core';
-// import { slide as Menu } from 'react-burger-menu';
+import { Component } from '@angular/core';
+
 import {
   faComputerMouse,
   faMailReplyAll,
@@ -11,10 +11,8 @@ import {
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  // Declare a boolean variable to store the menu state
   menuOpen: boolean = false;
 
-  // Define a function to toggle the menu state
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
