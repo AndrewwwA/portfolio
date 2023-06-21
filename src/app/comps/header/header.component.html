@@ -1,18 +1,55 @@
-<section
-  id="header"
-  class="flex justify-between text-3xl items-center sticky top-0 bg-BlacK rounded-xl z-10 w-screen h-[calc(2.9rem)]"
+<div
+  class="text-3xl sticky top-0 bg-BlacK rounded-b-xl z-10 w-screen h-[calc(2.9rem)]"
 >
-  <div class="font-bold ml-2 flex gap-3">
-    <fa-icon [icon]="faComputerMouse"></fa-icon>
-    <div class="w-fit">Andrew</div>
-  </div>
-  <section class="font-thin center hidden gap-16 pr-4 text-2xl md:flex mt-1">
-    <div class="">Home</div>
-    <div class="">Projects</div>
-    <div class="">Skills</div>
-    <div class="text-blue-500 ml-16" id="link">
-      <fa-icon [icon]="faMailReplyAll"></fa-icon>
-      Contact
+  <div id="header" class="flex justify-between items-center">
+    <div class="font-bold ml-2 flex gap-3 cursor-pointer">
+      <div class="w-fit" id="whiteShadow">Andrew</div>
     </div>
-  </section>
-</section>
+    <div id="">
+      <button
+        class="md:hidden mr-4 focus:outline-none pt-2"
+        (click)="toggleMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+
+      <div
+        class="md:hidden absolute top-[calc(2.9rem)] right-0 bg-black rounded-b-xl w-screen text-center text-white font-thin text-2xl"
+        *ngIf="menuOpen"
+      >
+        <div class="py-2 cursor-pointer" id="whiteShadow">Home</div>
+        <div class="py-2 cursor-pointer" id="whiteShadow">Projects</div>
+        <div class="py-2 cursor-pointer" id="whiteShadow">Skills</div>
+        <div class="py-2 text-blue-500 cursor-pointer" id="whiteShadow">
+          <fa-icon [icon]="faMailReplyAll"></fa-icon>
+          Contact
+        </div>
+      </div>
+
+      <section
+        class="font-thin center hidden gap-16 pr-4 text-2xl md:flex mt-1"
+      >
+        <div class="cursor-pointer" id="whiteShadow">Home</div>
+        <div class="cursor-pointer" id="whiteShadow">Projects</div>
+        <div class="cursor-pointer" id="whiteShadow">Skills</div>
+        <div class="text-blue-500 ml-16 cursor-pointer" id="whiteShadow">
+          <fa-icon [icon]="faMailReplyAll"></fa-icon>
+          Contact
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
