@@ -26,3 +26,8 @@
     background-position: 0;
   }
 }
+
+#textHub {
+  gap: 4vw;
+  font-size: 8vw;
+}
