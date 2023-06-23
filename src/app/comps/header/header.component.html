@@ -1,5 +1,6 @@
 <div
-  class="text-3xl sticky top-0 bg-gradient-to-r from-Purple via-black to-Purple md:rounded-b-xl z-10 w-screen h-[calc(2.9rem)] shadow-lg"
+  class="text-3xl sticky top-0 bg-gradient-to-r from-Purple via-BlacK to-Purple md:rounded-b-xl z-10 w-screen h-[calc(2.9rem)] shadow-lg"
+  [ngClass]="menuOpen ? 'mb-56' : 'mb-0'"
 >
   <div id="header" class="flex justify-between items-center">
     <div class="font-bold ml-2 flex gap-3 cursor-pointer">
@@ -31,7 +32,7 @@
       </button>
 
       <div
-        class="md:hidden absolute top-[calc(2.9rem)] right-0 bg-gradient-to-r from-Purple via-black to-Purple rounded-b-xl w-screen text-center font-thin text-2xl shadow-lg"
+        class="md:hidden absolute top-[calc(2.9rem)] right-0 bg-gradient-to-r from-Purple via-BlacK to-Purple rounded-b-xl w-screen text-center font-thin text-2xl shadow-lg"
         *ngIf="menuOpen"
       >
         <div
