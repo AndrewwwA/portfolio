@@ -1,17 +1,90 @@
-<div class="h-screen w-screen rounded-xl flex">
-  <div
-    class="h-2/5 w-6/12 rounded-xl ml-24 mt-2 flex justify-center content-center items-center"
-  >
-    <span
-      class="flex justify-center content-center items-center h-full text-6xl"
-      id="container"
-    >
-      Experienced in &nbsp;
-      <div id="wordsList">
-        <span id="k1">React</span> <span id="k2">Redux</span>
-        <span id="k3">NextJs</span> <span id="k4">Svelte</span>
-        <span id="k5">AngularJs</span>
-      </div>
-    </span>
+<!-- 
+  PRE ANIMATION SAVING FOR POSSIBLE CHANGES IN THE FUTURE!!!
+  <div class="h-screen w-screen rounded-xl">
+  <div class="h-[calc(35vw)] flex justify-around">
+    <div class="rounded-xl ml-8 grid content-center items-center" id="textHold">
+      <p>Andrew Alvarez,</p>
+
+      <span
+        class="flex justify-center content-center items-center"
+        id="container"
+      >
+        Experienced in &nbsp;
+        <div id="wordsList">
+          <span class="k1">React</span>
+          <span class="k3">NextJs</span> <span class="k4">Svelte</span>
+          <span class="k5">AngularJs</span>
+        </div>
+      </span>
+    </div>
+    <div id="boxContainer">
+      <img
+        class="box"
+        src="../../../assets/React-icon.svg.jpg"
+        class="h-[calc(15vw)] w-[calc(15cw)] box1"
+      />
+      <img
+        class="box"
+        src="../../../assets/next-js-logo.jpg"
+        class="h-[calc(15vw)] w-[calc(15cw)] box2"
+      />
+      <img
+        class="box"
+        class="h-[calc(15vw)] w-[calc(15cw)] box3"
+        src="../../../assets/svelte.jpg"
+      />
+      <img
+        class="box"
+        class="h-[calc(15vw)] w-[calc(15cw)] box4"
+        src="../../../assets/angular.jpg"
+      />
+    </div>
+  </div>
+</div> -->
+<div class="h-screen w-screen rounded-xl">
+  <div class="h-[calc(35vw)] flex items-center justify-around">
+    <div class="rounded-xl ml-8 grid content-center items-center" id="textHold">
+      <p>Andrew Alvarez,</p>
+
+      <span
+        class="flex justify-around content-center items-center"
+        id="container"
+      >
+        Experienced in  
+        <div
+          id="wordsList"
+          [@wordChange]="currentWord"
+          class="w-[calc(21.5vw)]"
+        >
+          <span class="k1" *ngIf="currentWord === 'react'">React</span>
+          <span class="k3" *ngIf="currentWord === 'nextjs'">NextJs</span>
+          <span class="k4" *ngIf="currentWord === 'svelte'">Svelte</span>
+          <span class="k5" *ngIf="currentWord === 'angularjs'">AngularJs</span>
+        </div>
+      </span>
+    </div>
+    <div id="boxContainer" class="">
+      <img
+        src="../../../assets/React-icon.svg.jpg"
+        class="box h-[calc(15vw)] w-[calc(15cw)] box1"
+        [class.highlight]="currentWord === 'react'"
+      />
+
+      <img
+        src="../../../assets/next-js-logo.jpg"
+        class="box h-[calc(15vw)] w-[calc(15cw)] box2"
+        [class.highlight]="currentWord === 'nextjs'"
+      />
+      <img
+        class="box h-[calc(15vw)] w-[calc(15cw)] box3"
+        src="../../../assets/svelte.jpg"
+        [class.highlight]="currentWord === 'svelte'"
+      />
+      <img
+        class="box h-[calc(15vw)] w-[calc(15cw)] box4"
+        src="../../../assets/angular.jpg"
+        [class.highlight]="currentWord === 'angularjs'"
+      />
+    </div>
   </div>
 </div>
