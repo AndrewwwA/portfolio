@@ -13,65 +13,17 @@ import {
   styleUrls: ['./startbox.component.css'],
   animations: [
     trigger('wordChange', [
-      state(
-        'react',
-        style({
-          color: 'aqua',
-        })
-      ),
-      state(
-        'nextjs',
-        style({
-          color: 'dimgrey',
-        })
-      ),
-      state(
-        'svelte',
-        style({
-          color: 'orange',
-        })
-      ),
-      state(
-        'angularjs',
-        style({
-          color: 'red',
-        })
-      ),
+      state('react', style({})),
+      state('nextjs', style({})),
+      state('svelte', style({})),
+      state('angularjs', style({})),
       transition('* => *', [animate('3s')]),
     ]),
     trigger('imageChange', [
-      state(
-        'react',
-        style({
-          border: '5px solid aqua',
-          borderRadius: '10px',
-          scale: '110%',
-        })
-      ),
-      state(
-        'nextjs',
-        style({
-          border: '5px solid dimgrey',
-          borderRadius: '10px',
-          scale: '110%',
-        })
-      ),
-      state(
-        'svelte',
-        style({
-          border: '5px solid orange',
-          borderRadius: '10px',
-          scale: '110%',
-        })
-      ),
-      state(
-        'angularjs',
-        style({
-          border: '5px solid red',
-          borderRadius: '10px',
-          scale: '110%',
-        })
-      ),
+      state('react', style({})),
+      state('nextjs', style({})),
+      state('svelte', style({})),
+      state('angularjs', style({})),
       transition('* => *', [animate('3s')]),
     ]),
   ],
