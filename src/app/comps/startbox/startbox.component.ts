@@ -19,13 +19,6 @@ import {
       state('angularjs', style({})),
       transition('* => *', [animate('3s')]),
     ]),
-    trigger('imageChange', [
-      state('react', style({})),
-      state('nextjs', style({})),
-      state('svelte', style({})),
-      state('angularjs', style({})),
-      transition('* => *', [animate('3s')]),
-    ]),
   ],
 })
 export class StartboxComponent {
