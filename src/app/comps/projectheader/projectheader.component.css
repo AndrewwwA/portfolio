@@ -4,16 +4,20 @@
     red,
     orange,
     yellow,
-    green,
-    blue,
-    indigo,
-    violet,
-    grey
+    brown,
+    red,
+    orange,
+    yellow,
+    brown,
+    red,
+    orange,
+    yellow,
+    brown
   );
   background-clip: text;
   color: transparent;
-  animation: rainbowAni 6s linear infinite;
-  background-size: 400%;
+  animation: rainbowAni 30s linear infinite;
+  background-size: 600%;
 }
 @keyframes rainbowAni {
   0% {
@@ -30,8 +34,8 @@
 #textHub {
   gap: 4vw;
   font-size: 8vw;
-  background: linear-gradient(to right, #202020 0%, #d946ef 0%, #202020 40%);
+  background: #8673a1;
 }
-#background {
-  /* background-image: repeating-linear-gradient(#d946ef 0%, #181618 20%); */
-}
+/* #background {
+  background-image: repeating-linear-gradient(#d946ef 0%, #181618 20%); 
+} */
