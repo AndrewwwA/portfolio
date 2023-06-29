@@ -35,7 +35,9 @@
   gap: 4vw;
   font-size: 8vw;
   background: #8673a1;
+  border: 6px solid #6441a5;
 }
+
 /* #background {
   background-image: repeating-linear-gradient(#d946ef 0%, #181618 20%); 
 } */
