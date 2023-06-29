@@ -30,4 +30,8 @@
 #textHub {
   gap: 4vw;
   font-size: 8vw;
+  background: linear-gradient(to right, #202020 0%, #d946ef 0%, #202020 40%);
+}
+#background {
+  /* background-image: repeating-linear-gradient(#d946ef 0%, #181618 20%); */
 }

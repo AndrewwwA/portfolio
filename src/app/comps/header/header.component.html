@@ -1,20 +1,62 @@
 <div
-  class="text-3xl sticky top-0 bg-BlacK md:rounded-b-xl z-10 w-screen h-[calc(2.9rem)] shadow-lg"
+  class="text-3xl sticky top-0 bg-BlacK md:rounded-b-xl z-10 w-full h-[calc(2.9rem)] shadow-lg pt-1"
   [ngClass]="menuOpen ? 'mb-56' : 'mb-0'"
 >
-  <div id="header" class="flex justify-between items-center">
-    <div class="font-bold ml-2 flex gap-3 cursor-pointer">
+  <div
+    id="header"
+    class="flex justify-between md:justify-between items-center h-8"
+  >
+    <div class="font-bold ml-4 cursor-pointer">
       <div
         class="w-fit text-backG transform hover:scale-110 transition-all duration-300"
       >
         Andrew
       </div>
     </div>
-    <div id="">
-      <button
-        class="md:hidden mr-4 focus:outline-none pt-2"
-        (click)="toggleMenu()"
+    <div
+      class="md:hidden absolute top-[calc(2.9rem)] right-0 bg-BlacK rounded-b-xl w-full text-center font-thin text-2xl shadow-lg"
+      *ngIf="menuOpen"
+    >
+      <div
+        class="py-2 cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
       >
+        Home
+      </div>
+      <div
+        class="py-2 cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
+      >
+        Projects
+      </div>
+      <div
+        class="py-2 cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
+      >
+        Skills
+      </div>
+      <div
+        class="py-2 text-blue-500 cursor-pointer transform hover:scale-110 transition-all duration-300"
+      >
+        Contact
+      </div>
+    </div>
+    <div class="md:flex gap-16 text-2xl font-thin hidden">
+      <div
+        class="cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
+      >
+        Home
+      </div>
+      <div
+        class="cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
+      >
+        Projects
+      </div>
+      <div
+        class="cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
+      >
+        Skills
+      </div>
+    </div>
+    <div class="mr-4">
+      <button class="md:hidden focus:outline-none pt-2" (click)="toggleMenu()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6 text-backG animate-spin-slow"
@@ -31,56 +73,13 @@
         </svg>
       </button>
 
-      <div
-        class="md:hidden absolute top-[calc(2.9rem)] right-0 bg-BlacK rounded-b-xl w-screen text-center font-thin text-2xl shadow-lg"
-        *ngIf="menuOpen"
-      >
+      <div class="font-thin center text-2xl mt-1 hidden md:block">
         <div
-          class="py-2 cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
-        >
-          Home
-        </div>
-        <div
-          class="py-2 cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
-        >
-          Projects
-        </div>
-        <div
-          class="py-2 cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
-        >
-          Skills
-        </div>
-        <div
-          class="py-2 text-blue-500 cursor-pointer transform hover:scale-110 transition-all duration-300"
+          class="text-blue-500 cursor-pointer transform hover:scale-110 transition-all duration-300"
         >
           Contact
         </div>
       </div>
-
-      <section
-        class="font-thin center hidden gap-16 pr-4 text-2xl md:flex mt-1"
-      >
-        <div
-          class="cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
-        >
-          Home
-        </div>
-        <div
-          class="cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
-        >
-          Projects
-        </div>
-        <div
-          class="cursor-pointer text-backG transform hover:scale-110 transition-all duration-300"
-        >
-          Skills
-        </div>
-        <div
-          class="text-blue-500 ml-16 cursor-pointer transform hover:scale-110 transition-all duration-300"
-        >
-          Contact
-        </div>
-      </section>
     </div>
   </div>
 </div>
