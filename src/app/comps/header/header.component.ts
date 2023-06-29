@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   menuOpen: boolean = false;
+  closeHam: boolean = false;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -15,5 +16,9 @@ export class HeaderComponent {
 
   getMenuvalue() {
     return this.menuOpen;
+  }
+  closeHamEvent() {
+    console.log(this.closeHam);
+    this.closeHam = !this.closeHam;
   }
 }
