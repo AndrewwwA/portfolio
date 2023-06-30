@@ -9,6 +9,8 @@ import { StartboxComponent } from './comps/startbox/startbox.component';
 import { SubheaderComponent } from './comps/subheader/subheader.component';
 import { ProjectheaderComponent } from './comps/projectheader/projectheader.component';
 import { ProjectsComponent } from './comps/projects/projects.component';
+import { SkillsheaderComponent } from './comps/skillsheader/skillsheader.component';
+import { AboutheaderComponent } from './comps/aboutheader/aboutheader.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { ProjectsComponent } from './comps/projects/projects.component';
     SubheaderComponent,
     ProjectheaderComponent,
     ProjectsComponent,
+    SkillsheaderComponent,
+    AboutheaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
