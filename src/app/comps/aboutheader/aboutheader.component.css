@@ -1,0 +1,61 @@
+#rainbowEff {
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    brown,
+    red,
+    orange,
+    yellow,
+    brown,
+    red,
+    orange,
+    yellow,
+    brown
+  );
+  background-clip: text;
+  color: transparent;
+  animation: rainbowAni 30s linear infinite;
+  background-size: 600%;
+}
+@keyframes rainbowAni {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+#textHub {
+  gap: 4vw;
+  font-size: 8vw;
+  background: #8673a1;
+  border: 6px solid #6441a5;
+  animation: pulsingFire 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulsingFire {
+  20% {
+    opacity: 80%;
+  }
+  35% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 60%;
+  }
+  65% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 75%;
+  }
+}
+
+/* #background {
+      background-image: repeating-linear-gradient(#d946ef 0%, #181618 20%); 
+    } */
