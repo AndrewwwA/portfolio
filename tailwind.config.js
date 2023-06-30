@@ -10,6 +10,9 @@ module.exports = {
         redIsh: "#201820",
         BlacK: "#202020",
       },
+      width: {
+        "fit-2vw": "calc(fit-content + 10rem)",
+      },
     },
   },
   plugins: ["tailwindcss/nesting"],
