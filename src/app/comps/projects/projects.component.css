@@ -1,0 +1,54 @@
+.flexboxes {
+  border-radius: 3em 3em 3em 3em;
+  transition: 0.8s;
+}
+
+#flexboxes1 {
+  background-image: url("../../../assets/lunchbuddyPURPLE.jpg");
+  background-size: 35vw;
+  transition: 0.8s;
+}
+#flexboxes2 {
+  background-image: url("../../../assets/lunchbuddyPURPLE.jpg");
+  background-size: 35vw;
+  transition: 0.8s;
+}
+#flexboxes3 {
+  background-image: url("../../../assets/lunchbuddyPURPLE.jpg");
+  background-size: 35vw;
+  transition: 0.8s;
+}
+#flexboxes4 {
+  background-image: url("../../../assets/lunchbuddyPURPLE.jpg");
+  background-size: 35vw;
+  transition: 0.8s;
+}
+
+#flexboxes1:hover {
+  flex-basis: 300%;
+  padding-left: 5vw;
+  background-size: 100%;
+  transition: 0.4;
+  background-image: url("../../../assets/lunchbuddy.jpg");
+}
+#flexboxes2:hover {
+  flex-basis: 300%;
+  padding-left: 5vw;
+  background-size: 100%;
+  transition: 0.4;
+  background-image: url("../../../assets/lunchbuddy.jpg");
+}
+#flexboxes3:hover {
+  flex-basis: 300%;
+  padding-left: 5vw;
+  background-size: 100%;
+  transition: 0.4;
+  background-image: url("../../../assets/lunchbuddy.jpg");
+}
+#flexboxes4:hover {
+  flex-basis: 300%;
+  padding-left: 5vw;
+  background-size: 100%;
+  transition: 0.4;
+  background-image: url("../../../assets/lunchbuddy.jpg");
+}
