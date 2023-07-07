@@ -22,13 +22,24 @@ export class ProjectsComponent implements AfterViewInit {
     this.resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
         const target = entry.target as HTMLElement;
-        if (target.clientWidth < 125) {
+        if (target.clientWidth > 300) {
+          target.style.color = 'Purple';
+          target.style.flexDirection = 'row';
+
+          // target.style.paddingLeft = '0px';
+          // target.style.transition = '.2s';
+        } else if (target.clientWidth < 125) {
           target.style.alignItems = 'center';
           target.style.paddingLeft = '0px';
-          target.style.transition = '.8s';
+          target.style.transition = '.2s';
+          target.style.flexDirection = 'column';
         } else {
           target.style.alignItems = '';
+          target.style.color = '';
+          target.style.flexDirection = 'column';
+
           target.style.paddingLeft = '';
+          target.style.transition = '.2s';
         }
       }
     });
