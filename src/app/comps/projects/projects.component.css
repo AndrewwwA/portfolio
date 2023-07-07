@@ -4,13 +4,15 @@
 }
 
 #flexboxes1 {
-  background-image: url("../../../assets/lunchbuddyPURPLE.jpg");
-  background-size: 35vw;
+  background-image: url("../../../assets/coffeBlack.jpg");
+  background-position-x: 57%;
+  background-size: 50vw;
   transition: 0.8s;
 }
 #flexboxes2 {
-  background-image: url("../../../assets/lunchbuddyPURPLE.jpg");
-  background-size: 35vw;
+  background-image: url("../../../assets/keyboard.jpg");
+  background-size: 50vw;
+  background-position-x: 28%;
   transition: 0.8s;
 }
 #flexboxes3 {
@@ -29,14 +31,14 @@
   padding-left: 5vw;
   background-size: 100%;
   transition: 0.4;
-  background-image: url("../../../assets/lunchbuddy.jpg");
+  background-image: url("../../../assets/lunchbuddyBLACK.jpg");
 }
 #flexboxes2:hover {
   flex-basis: 300%;
   padding-left: 5vw;
   background-size: 100%;
   transition: 0.4;
-  background-image: url("../../../assets/lunchbuddy.jpg");
+  background-image: url("../../../assets/typing-ssNORMAL.jpg");
 }
 #flexboxes3:hover {
   flex-basis: 300%;
