@@ -18,6 +18,8 @@ export class ProjectsComponent implements AfterViewInit {
   ngAfterViewInit() {
     const flexboxes =
       this.elementRef.nativeElement.querySelectorAll('.flexboxes');
+    // const secondText =
+    //   this.elementRef.nativeElement.querySelectorAll('.secondText');
 
     this.resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
