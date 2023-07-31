@@ -7,10 +7,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './comps/header/header.component';
 import { StartboxComponent } from './comps/startbox/startbox.component';
 import { SubheaderComponent } from './comps/subheader/subheader.component';
-import { ProjectheaderComponent } from './comps/projectheader/projectheader.component';
 import { ProjectsComponent } from './comps/projects/projects.component';
-import { SkillsheaderComponent } from './comps/skillsheader/skillsheader.component';
-import { AboutheaderComponent } from './comps/aboutheader/aboutheader.component';
+import { CarouselComponent } from './comps/carousel/carousel.component';
+import { NavbuttonComponent } from './comps/navbutton/navbutton.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +17,9 @@ import { AboutheaderComponent } from './comps/aboutheader/aboutheader.component'
     HeaderComponent,
     StartboxComponent,
     SubheaderComponent,
-    ProjectheaderComponent,
     ProjectsComponent,
-    SkillsheaderComponent,
-    AboutheaderComponent,
+    CarouselComponent,
+    NavbuttonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
