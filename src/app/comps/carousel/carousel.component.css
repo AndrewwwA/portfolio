@@ -35,6 +35,9 @@
   align-items: center;
   padding: 1rem;
 }
+#slider-track:hover {
+  animation-play-state: paused;
+}
 
 img {
   width: 100%;
