@@ -1,14 +1,66 @@
-#logos-slide img {
-  display: inline-block;
-  height: 50px;
-  margin: 0 10rem;
-  animation: slide 5s infinite;
+#body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
-@keyframes slide {
-  from {
+#slider {
+  height: 200px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+#slider-track {
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translate(-1000%);
+  100% {
+    transform: translateX(calc(-250px * 9));
   }
+}
+
+#slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+#slider::before,
+#slider::after {
+  background: linear-gradient(
+    to right,
+    #6441a5 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+#slider:before {
+  left: 0;
+  top: 0;
+}
+
+#slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
 }
