@@ -1,0 +1,14 @@
+#logos-slide img {
+  display: inline-block;
+  height: 50px;
+  margin: 0 10rem;
+  animation: slide 5s infinite;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(-1000%);
+  }
+}
