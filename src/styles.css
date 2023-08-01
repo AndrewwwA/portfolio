@@ -4,10 +4,9 @@
 
 body {
   color: #8673a1;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   background: #181618;
   scrollbar-width: none;
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* html, body { height: 100%; }
