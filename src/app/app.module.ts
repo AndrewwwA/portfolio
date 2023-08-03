@@ -10,6 +10,7 @@ import { SubheaderComponent } from './comps/subheader/subheader.component';
 import { ProjectsComponent } from './comps/projects/projects.component';
 import { CarouselComponent } from './comps/carousel/carousel.component';
 import { NavbuttonComponent } from './comps/navbutton/navbutton.component';
+import { FrontPageComponent } from './comps/front-page/front-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NavbuttonComponent } from './comps/navbutton/navbutton.component';
     ProjectsComponent,
     CarouselComponent,
     NavbuttonComponent,
+    FrontPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
