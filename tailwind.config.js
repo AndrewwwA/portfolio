@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,ts}", "./projects/**/*.{html,ts}"],
   darkMode: "class",
   theme: {
+    screens: {
+      customSize: "1200px",
+    },
     extend: {
       colors: {
         Purple: "#6441a5",
