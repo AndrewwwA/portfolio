@@ -9,8 +9,8 @@ import { StartboxComponent } from './comps/startbox/startbox.component';
 import { SubheaderComponent } from './comps/subheader/subheader.component';
 import { ProjectsComponent } from './comps/projects/projects.component';
 import { CarouselComponent } from './comps/carousel/carousel.component';
-import { NavbuttonComponent } from './comps/navbutton/navbutton.component';
 import { FrontPageComponent } from './comps/front-page/front-page.component';
+import { NavbarComponent } from './comps/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +20,8 @@ import { FrontPageComponent } from './comps/front-page/front-page.component';
     SubheaderComponent,
     ProjectsComponent,
     CarouselComponent,
-    NavbuttonComponent,
     FrontPageComponent,
+    NavbarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
