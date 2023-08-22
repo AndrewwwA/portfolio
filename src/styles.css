@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  color: #8673a1;
+  color: white;
   background: #181618;
   scrollbar-width: none;
   font-family: "Courier New", Courier, monospace;
