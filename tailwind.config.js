@@ -12,6 +12,7 @@ module.exports = {
         backG: "#8673A1",
         redIsh: "#201820",
         BlacK: "#202020",
+        mainCOLOR: "	#00BFFF",
       },
       width: {
         "fit-2vw": "calc(fit-content + 10rem)",
