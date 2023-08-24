@@ -11,6 +11,7 @@ import { ProjectsComponent } from './comps/projects/projects.component';
 import { CarouselComponent } from './comps/carousel/carousel.component';
 import { FrontPageComponent } from './comps/front-page/front-page.component';
 import { NavbarComponent } from './comps/navbar/navbar.component';
+import { Carousel2Component } from './comps/carousel2/carousel2.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavbarComponent } from './comps/navbar/navbar.component';
     CarouselComponent,
     FrontPageComponent,
     NavbarComponent,
+    Carousel2Component,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
