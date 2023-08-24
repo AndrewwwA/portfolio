@@ -1,0 +1,87 @@
+#purpleBG {
+  /* border-radius: 2% 2% 0% 0%; */
+  background: #4b0082;
+}
+#slider {
+  /* height: 12rem; */
+  margin: auto;
+  position: relative;
+  /* CHANGE THIS TO PUT IT CLOSER TOGETHER OR NOT */
+  width: 1200px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+#slider-track {
+  display: flex;
+
+  width: calc(250px * 36);
+  animation: scroll 80s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 18));
+  }
+}
+
+#slide {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+#slider-track:hover {
+  animation-play-state: paused;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+#slider::before,
+#slider::after {
+  background: linear-gradient(
+    to right,
+    #4b0082 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+#slider:before {
+  left: 0;
+  top: 0;
+}
+
+#slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+#boxes {
+  height: 20%;
+  flex-basis: auto;
+  margin-top: 20px;
+  transition-duration: 0.5s;
+  /* border-radius: ; */
+}
+#boxes:hover {
+  height: 50%;
+  transition-duration: 0.5ms;
+  /* padding: 10%; */
+}
+#boxholder {
+  /* overflow-y: auto; */
+}
