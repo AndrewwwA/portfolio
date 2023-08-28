@@ -1,5 +1,7 @@
 #purpleBG {
   /* border-radius: 2% 2% 0% 0%; */
+  transition-duration: 0.5s;
+
   background: #4b0082;
 }
 #slider {
