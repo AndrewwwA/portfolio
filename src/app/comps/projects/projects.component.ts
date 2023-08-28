@@ -2,11 +2,6 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
-  template: `
-    <div #container class="container">
-      <div #flexboxes id="flexboxes">Content</div>
-    </div>
-  `,
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
 })
@@ -18,12 +13,14 @@ export class ProjectsComponent implements AfterViewInit {
   ngAfterViewInit() {
     const flexboxes =
       this.elementRef.nativeElement.querySelectorAll('.flexboxes');
+    // console.log(flexboxes);
     // const secondText =
     //   this.elementRef.nativeElement.querySelectorAll('.secondText');
 
     this.resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
         const target = entry.target as HTMLElement;
+        // console.log(target.clientWidth);
         if (target.clientWidth > 300) {
           target.style.color = 'Purple';
           target.style.flexDirection = 'row';
@@ -47,6 +44,7 @@ export class ProjectsComponent implements AfterViewInit {
     });
 
     for (let entry of flexboxes) {
+      console.log(entry);
       this.resizeObserver.observe(entry);
     }
   }
