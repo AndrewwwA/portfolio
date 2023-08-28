@@ -1,4 +1,4 @@
-import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carousel2',
@@ -6,23 +6,32 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
   styleUrls: ['./carousel2.component.css'],
 })
 export class Carousel2Component implements AfterViewInit {
+  @ViewChild('content') elementView: ElementRef = new ElementRef(null);
   private resizeObserver!: ResizeObserver;
 
   constructor(private elementRef: ElementRef) {}
 
   ngAfterViewInit() {
+    console.log(this.elementView);
+
     const slide = this.elementRef.nativeElement.querySelectorAll('#boxes');
+    const background =
+      this.elementRef.nativeElement.querySelectorAll('#purpleBG');
     // console.log('dwadwaawdawdwawadadwad', slide);
 
     this.resizeObserver = new ResizeObserver((projects) => {
       for (let project of projects) {
+        // console.log(project, 'background');
+
         const target = project.target as HTMLElement;
-        console.log(target.clientHeight);
+        // const backg = project.target as HTMLElement;
+        // console.log(background);
         if (target.clientHeight > 395) {
-          target.style.display = 'Hidden';
+          this.elementView.nativeElement.style.height = '1450px';
         } else {
-          target.style.backgroundColor = '';
+          this.elementView.nativeElement.style.height = '1240px';
         }
+        console.log(background);
         // console.log(target.clientWidth);
       }
     });
@@ -33,6 +42,7 @@ export class Carousel2Component implements AfterViewInit {
     }
   }
 
+  // console.log(elementView)
   ngOnDestroy() {
     this.resizeObserver.disconnect();
   }
