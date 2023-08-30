@@ -32,7 +32,7 @@ export class Carousel2Component implements AfterViewInit {
 
         if (project.target.clientHeight > 395) {
           const val = Number(
-            project.target.attributes.getNamedItem('test').value
+            project.target.attributes.getNamedItem('value').value
           );
           if (val === 1) {
             this.small1.nativeElement.style.display = 'none';
@@ -53,7 +53,7 @@ export class Carousel2Component implements AfterViewInit {
           this.elementView.nativeElement.style.height = '1480px';
         } else {
           const val = Number(
-            project.target.attributes.getNamedItem('test').value
+            project.target.attributes.getNamedItem('value').value
           );
           if (val === 1) {
             this.small1.nativeElement.style.display = 'flex';
