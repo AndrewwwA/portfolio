@@ -80,7 +80,7 @@ img {
   /* border-radius: ; */
 }
 #boxes:hover {
-  height: 50%;
+  height: 55%;
   transition-duration: 0.5ms;
   /* padding: 10%; */
 }
