@@ -6,7 +6,7 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
   styleUrls: ['./carousel2.component.css'],
 })
 export class Carousel2Component implements AfterViewInit {
-  @ViewChild('content') elementView: ElementRef = new ElementRef(null);
+  @ViewChild('content') background1: ElementRef = new ElementRef(null);
   @ViewChild('small1') small1: ElementRef = new ElementRef(null);
   @ViewChild('large1') large1: ElementRef = new ElementRef(null);
   @ViewChild('small2') small2: ElementRef = new ElementRef(null);
@@ -26,7 +26,7 @@ export class Carousel2Component implements AfterViewInit {
     const background =
       this.elementRef.nativeElement.querySelectorAll('#purpleBG');
 
-    this.resizeObserver = new ResizeObserver((projects) => {
+    this.resizeObserver = new ResizeObserver(async (projects) => {
       for (let i = 0; i < projects.length; i++) {
         const project = projects[i];
 
@@ -50,7 +50,10 @@ export class Carousel2Component implements AfterViewInit {
             this.small4.nativeElement.style.display = 'none';
             this.large4.nativeElement.style.display = 'flex';
           }
-          this.elementView.nativeElement.style.height = '1480px';
+
+          let size = await this.background1.nativeElement.clientHeight;
+          size = Number(size) + 250;
+          this.background1.nativeElement.style.height = size + 'px';
         } else {
           const val = Number(
             project.target.attributes.getNamedItem('value').value
@@ -71,7 +74,16 @@ export class Carousel2Component implements AfterViewInit {
             this.small4.nativeElement.style.display = 'flex';
             this.large4.nativeElement.style.display = 'none';
           }
-          this.elementView.nativeElement.style.height = '1240px';
+          let size = await this.background1.nativeElement.clientHeight;
+
+          if (size > 1240) {
+            size = Number(size) - 250;
+            if (size < 1240) {
+              this.background1.nativeElement.style.height = '1240px';
+            } else {
+              this.background1.nativeElement.style.height = size + 'px';
+            }
+          }
         }
       }
     });
