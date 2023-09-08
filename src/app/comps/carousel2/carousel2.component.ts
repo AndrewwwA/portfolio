@@ -1,3 +1,4 @@
+import { Attribute } from '@angular/compiler';
 import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -6,6 +7,7 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
   styleUrls: ['./carousel2.component.css'],
 })
 export class Carousel2Component implements AfterViewInit {
+  mousehere: boolean = false;
   @ViewChild('content') background1: ElementRef = new ElementRef(null);
   @ViewChild('small1') small1: ElementRef = new ElementRef(null);
   @ViewChild('large1') large1: ElementRef = new ElementRef(null);
@@ -17,6 +19,19 @@ export class Carousel2Component implements AfterViewInit {
   @ViewChild('large4') large4: ElementRef = new ElementRef(null);
   private resizeObserver!: ResizeObserver;
 
+  async mouseOver() {
+    this.mousehere = true;
+    let size = await this.background1.nativeElement.clientHeight;
+    size = Number(size) + 250;
+    this.background1.nativeElement.style.height = size + 'px';
+  }
+  async mouseOut() {
+    this.mousehere = false;
+    let size = await this.background1.nativeElement.clientHeight;
+    size = Number(size) - 250;
+    this.background1.nativeElement.style.height = size + 'px';
+  }
+
   constructor(private elementRef: ElementRef) {}
 
   ngAfterViewInit() {
@@ -27,9 +42,11 @@ export class Carousel2Component implements AfterViewInit {
       this.elementRef.nativeElement.querySelectorAll('#purpleBG');
 
     this.resizeObserver = new ResizeObserver(async (projects) => {
+      if (this.mousehere === false) {
+        this.background1.nativeElement.style.height = '1240px';
+      }
       for (let i = 0; i < projects.length; i++) {
         const project = projects[i];
-
         if (project.target.clientHeight > 395) {
           const val = Number(
             project.target.attributes.getNamedItem('value').value
@@ -50,10 +67,6 @@ export class Carousel2Component implements AfterViewInit {
             this.small4.nativeElement.style.display = 'none';
             this.large4.nativeElement.style.display = 'flex';
           }
-
-          let size = await this.background1.nativeElement.clientHeight;
-          size = Number(size) + 250;
-          this.background1.nativeElement.style.height = size + 'px';
         } else {
           const val = Number(
             project.target.attributes.getNamedItem('value').value
@@ -73,16 +86,6 @@ export class Carousel2Component implements AfterViewInit {
           if (val === 4) {
             this.small4.nativeElement.style.display = 'flex';
             this.large4.nativeElement.style.display = 'none';
-          }
-          let size = await this.background1.nativeElement.clientHeight;
-
-          if (size > 1240) {
-            size = Number(size) - 250;
-            if (size < 1240) {
-              this.background1.nativeElement.style.height = '1240px';
-            } else {
-              this.background1.nativeElement.style.height = size + 'px';
-            }
           }
         }
       }
