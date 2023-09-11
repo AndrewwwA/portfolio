@@ -43,7 +43,9 @@ export class Carousel2Component implements AfterViewInit {
 
     this.resizeObserver = new ResizeObserver(async (projects) => {
       if (this.mousehere === false) {
+        // this.background1.nativeElement.style.transition = '0.1s' ;
         this.background1.nativeElement.style.height = '1240px';
+        // this.background1.nativeElement.style.transition = '0.5s';
       }
       for (let i = 0; i < projects.length; i++) {
         const project = projects[i];
