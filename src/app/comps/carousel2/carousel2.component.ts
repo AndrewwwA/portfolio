@@ -8,6 +8,7 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 })
 export class Carousel2Component implements AfterViewInit {
   mousehere: boolean = false;
+  fastval: number = 950;
   @ViewChild('content') background1: ElementRef = new ElementRef(null);
   @ViewChild('small1') small1: ElementRef = new ElementRef(null);
   @ViewChild('large1') large1: ElementRef = new ElementRef(null);
@@ -20,16 +21,16 @@ export class Carousel2Component implements AfterViewInit {
   private resizeObserver!: ResizeObserver;
 
   async mouseOver() {
+    this.fastval += 210;
+    this.background1.nativeElement.style.height = this.fastval + 'px';
     this.mousehere = true;
-    let size = await this.background1.nativeElement.clientHeight;
-    size = Number(size) + 250;
-    this.background1.nativeElement.style.height = size + 'px';
   }
   async mouseOut() {
-    this.mousehere = false;
-    let size = await this.background1.nativeElement.clientHeight;
-    size = Number(size) - 250;
-    this.background1.nativeElement.style.height = size + 'px';
+    if (this.fastval > 950) {
+      this.fastval -= 210;
+      this.background1.nativeElement.style.height = this.fastval + 'px';
+      this.mousehere = false;
+    }
   }
 
   constructor(private elementRef: ElementRef) {}
@@ -42,14 +43,10 @@ export class Carousel2Component implements AfterViewInit {
       this.elementRef.nativeElement.querySelectorAll('#purpleBG');
 
     this.resizeObserver = new ResizeObserver(async (projects) => {
-      if (this.mousehere === false) {
-        // this.background1.nativeElement.style.transition = '0.1s' ;
-        this.background1.nativeElement.style.height = '1240px';
-        // this.background1.nativeElement.style.transition = '0.5s';
-      }
       for (let i = 0; i < projects.length; i++) {
         const project = projects[i];
-        if (project.target.clientHeight > 395) {
+        if (project.target.clientHeight > 369) {
+          // console.log(project.target.clientHeight);
           const val = Number(
             project.target.attributes.getNamedItem('value').value
           );
