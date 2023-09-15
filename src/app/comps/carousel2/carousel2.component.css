@@ -73,9 +73,9 @@ img {
 }
 
 #boxes {
-  height: 20%;
-  flex-basis: auto;
-  margin-top: 20px;
+  height: 24%;
+  /* flex-basis: auto; */
+  margin-top: 15px;
   transition-duration: 0.5s;
   /* border-radius: ; */
 }
