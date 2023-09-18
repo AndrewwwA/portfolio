@@ -12,6 +12,7 @@ import { CarouselComponent } from './comps/carousel/carousel.component';
 import { FrontPageComponent } from './comps/front-page/front-page.component';
 import { NavbarComponent } from './comps/navbar/navbar.component';
 import { Carousel2Component } from './comps/carousel2/carousel2.component';
+import { FooterComponent } from './comps/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { Carousel2Component } from './comps/carousel2/carousel2.component';
     FrontPageComponent,
     NavbarComponent,
     Carousel2Component,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
